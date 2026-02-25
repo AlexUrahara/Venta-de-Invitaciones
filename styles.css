@@ -207,6 +207,57 @@ body {
 .custom-indicators button:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+/* ===== BOTÓN SCROLL DOWN ===== */
+.scroll-down-btn {
+    position: absolute;
+    bottom: 100px; /* Ajusta la distancia desde abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20; /* Por encima de los indicadores */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    backdrop-filter: blur(5px);
+    border: 2.4px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    animation: bounceZoom 1.5s infinite ease-in-out;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-down-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.9);
+    color: white;
+}
+
+/* Animación de rebote y zoom */
+@keyframes bounceZoom {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2);
+    }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .scroll-down-btn {
+        bottom: 80px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+}
+
 /* ===== SECCIONES GENERALES ===== */
 section {
     scroll-margin-top: 76px;

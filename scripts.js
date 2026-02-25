@@ -111,3 +111,16 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// ===== BOTÓN SCROLL DOWN =====
+document.querySelector('.scroll-down-btn')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href'); // #credibilidad
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+});
