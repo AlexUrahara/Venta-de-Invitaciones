@@ -125,7 +125,7 @@ document.querySelector('.scroll-down-btn')?.addEventListener('click', function(e
     }
 });
 
-// ===== CREDIBILIDAD: ANIMACIÓN DE ENTRADA Y CONTADORES =====
+// ===== CONTADORES ANIMADOS Y EFECTO DE APARICIÓN EN CREDIBILIDAD =====
 (function() {
     const seccion = document.getElementById('credibilidad');
     if (!seccion) return;
@@ -133,47 +133,79 @@ document.querySelector('.scroll-down-btn')?.addEventListener('click', function(e
     const items = seccion.querySelectorAll('.credibilidad-item');
     const contadores = seccion.querySelectorAll('.contador');
 
+    // Variable para almacenar los intervalos y poder detenerlos
+    let intervalos = [];
+
+    // Función para detener todos los intervalos activos
+    function detenerIntervalos() {
+        intervalos.forEach(interval => clearInterval(interval));
+        intervalos = [];
+    }
+
+    // Función para reiniciar los contadores a 0
+    function reiniciarContadores() {
+        contadores.forEach(contador => {
+            contador.textContent = '0';
+        });
+    }
+
     // Función para animar un contador
     function animarContador(elemento) {
         const objetivo = parseInt(elemento.getAttribute('data-target'), 10);
         let actual = 0;
-        const incremento = Math.ceil(objetivo / 50);
-        const timer = setInterval(() => {
+        const incremento = Math.ceil(objetivo / 50); // 50 pasos
+        const duracion = 80; // ms
+        const interval = setInterval(() => {
             actual += incremento;
             if (actual >= objetivo) {
                 elemento.textContent = objetivo;
-                clearInterval(timer);
+                clearInterval(interval);
+                // Remover de la lista de intervalos activos
+                intervalos = intervalos.filter(i => i !== interval);
             } else {
                 elemento.textContent = actual;
             }
-        }, 30);
+        }, duracion);
+        intervalos.push(interval);
     }
 
-    // Función para verificar si la sección está en el viewport
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return rect.top <= window.innerHeight * 0.8 && rect.bottom >= 0;
+    // Función para iniciar las animaciones de todos los contadores
+    function iniciarContadores() {
+        contadores.forEach(contador => {
+            animarContador(contador);
+        });
     }
 
-    // Función para actualizar la clase 'visible' en los items
-    function updateVisibility() {
-        if (isElementInViewport(seccion)) {
-            items.forEach(item => item.classList.add('visible'));
-            // Iniciar contadores si aún no tienen el valor final
-            contadores.forEach(cont => {
-                const actual = parseInt(cont.textContent);
-                const objetivo = parseInt(cont.getAttribute('data-target'));
-                if (actual < objetivo) {
-                    animarContador(cont);
-                }
-            });
-        } else {
-            items.forEach(item => item.classList.remove('visible'));
-        }
-    }
+    // Configurar Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // La sección es visible: mostrar items con animación
+                items.forEach(item => {
+                    item.classList.add('visible');
+                });
+                // Reiniciar contadores y animarlos
+                reiniciarContadores();
+                iniciarContadores();
+            } else {
+                // La sección no es visible: ocultar items y detener contadores
+                items.forEach(item => {
+                    item.classList.remove('visible');
+                });
+                detenerIntervalos();
+                reiniciarContadores(); // Opcional: para que al volver a entrar empiecen desde 0
+            }
+        });
+    }, { threshold: 0.3 }); // 30% visible
 
-    // Ejecutar al cargar y al hacer scroll
-    window.addEventListener('load', updateVisibility);
-    window.addEventListener('scroll', updateVisibility);
-    window.addEventListener('resize', updateVisibility);
+    observer.observe(seccion);
+
+    // Si la sección ya está visible al cargar (por scroll inicial), forzar la activación
+    if (seccion.getBoundingClientRect().top < window.innerHeight && seccion.getBoundingClientRect().bottom > 0) {
+        items.forEach(item => {
+            item.classList.add('visible');
+        });
+        reiniciarContadores();
+        iniciarContadores();
+    }
 })();
