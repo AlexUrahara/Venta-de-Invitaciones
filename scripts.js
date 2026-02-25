@@ -67,3 +67,20 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// ===== CONTROL DE NAVBAR AL HACER SCROLL =====
+const navbar = document.getElementById('mainNav');
+const hero = document.getElementById('hero');
+
+function checkScroll() {
+    if (!hero) return;
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    if (window.scrollY > heroBottom - navbar.offsetHeight) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('load', checkScroll);

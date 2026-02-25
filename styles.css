@@ -12,44 +12,62 @@ body {
     padding-top: 76px;
     color: #212529;
 }
-
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR CON EFECTO DE TRANSPARENCIA Y REDUCCIÓN ===== */
 #mainNav {
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+}
+
+#mainNav:not(.scrolled) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#mainNav:not(.scrolled) .navbar-brand,
+#mainNav:not(.scrolled) .nav-link {
+    color: white !important;
+}
+
+#mainNav:not(.scrolled) .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+#mainNav.scrolled {
     background-color: #ffffff !important;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
 }
 
-/* Logo en azul y efecto shake */
-.navbar-brand {
+#mainNav.scrolled .navbar-brand,
+#mainNav.scrolled .nav-link {
+    color: #212529 !important;
+}
+
+#mainNav.scrolled .navbar-toggler-icon {
+    filter: none;
+}
+
+/* Ajuste para el offcanvas */
+.offcanvas .navbar-brand {
     color: var(--bs-primary) !important;
-    letter-spacing: -0.02em;
-    font-size: 1.5rem;
-    transition: transform 0.2s;
-    display: inline-block;
-}
-.navbar-brand:hover {
-    animation: shake 0.5s ease-in-out;
-}
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
-    20%, 40%, 60%, 80% { transform: translateX(2px); }
 }
 
-/* Estilos para enlaces en escritorio */
+/* Efectos hover en escritorio */
 @media (min-width: 992px) {
-    .navbar-nav .nav-link {
+    #mainNav .nav-link {
         position: relative;
         font-weight: 500;
-        color: #212529;
         margin: 0 0.5rem;
         padding-bottom: 0.25rem;
-        transition: color 0.2s;
     }
-    .navbar-nav .nav-link:hover {
-        color: var(--bs-primary);
+    #mainNav:not(.scrolled) .nav-link:hover {
+        color: rgba(255,255,255,0.8) !important;
     }
-    .navbar-nav .nav-link::after {
+    #mainNav.scrolled .nav-link:hover {
+        color: var(--bs-primary) !important;
+    }
+    #mainNav.scrolled .nav-link::after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -60,7 +78,7 @@ body {
         background-color: var(--bs-primary);
         transition: width 0.3s ease;
     }
-    .navbar-nav .nav-link:hover::after {
+    #mainNav.scrolled .nav-link:hover::after {
         width: 80%;
     }
 }
@@ -160,49 +178,36 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-/* ===== INDICADORES DEL HERO CON TRANSICIÓN ULTRA SUAVE Y PUNTAS REDONDAS ===== */
+/* ===== INDICADORES DEL HERO: DISEÑO LIMPIO Y TRANSICIÓN SUAVE ===== */
 .custom-indicators {
     bottom: 30px;
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     z-index: 10;
+    padding: 0;
 }
 
 .custom-indicators button {
     width: 45px;
-    height: 6px;                /* un poco más alto para mejor visibilidad */
+    height: 8px;                /* Altura ligeramente mayor para que el redondeo sea más notorio */
     border: none;
-    border-radius: 20px;         /* puntas completamente redondas */
+    border-radius: 8px;         /* La mitad de la altura = puntas semicirculares perfectas */
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     padding: 0;
     margin: 0;
-    transition: width 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),  /* curva elástica suave */
-                background-color 0.4s ease,
-                transform 0.4s ease;
-    opacity: 0.8;
+    transition: width 0.7s ease, background-color 0.3s ease;
 }
 
 .custom-indicators button.active {
-    width: 90px;                 /* más ancho para destacar */
+    width: 90px;                /* Se ensancha claramente al activarse */
     background-color: #ffffff;
-    opacity: 1;
-    transform: scaleY(1.2);      /* pequeño estiramiento vertical al activarse */
 }
 
-.custom-indicators button:not(.active) {
-    opacity: 0.5;
-    transform: scaleY(1);
-}
-
-/* Efecto hover para dar feedback */
 .custom-indicators button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    opacity: 1;
-    transform: scaleY(1.1);
+    background-color: rgba(255, 255, 255, 0.8);
 }
-
 /* ===== SECCIONES GENERALES ===== */
 section {
     scroll-margin-top: 76px;
