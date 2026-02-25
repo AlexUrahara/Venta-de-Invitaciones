@@ -328,59 +328,103 @@ section {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Tarjetas de servicio */
-.card {
-    transition: transform 0.2s, box-shadow 0.2s;
+/* ===== SERVICIOS DE IMPRESIÓN - ESTILOS ESPECÍFICOS ===== */
+#servicios-fisicos {
+    background-color: transparent;
 }
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1) !important;
+
+/* Animación de aparición */
+.servicio-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.card-img-top {
-    height: 200px;
+.servicio-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tarjetas sin fondo ni sombra */
+#servicios-fisicos .card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+#servicios-fisicos .card-img-top {
+    border-radius: 12px;
+    height: 180px;
     object-fit: cover;
 }
+#servicios-fisicos .card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+#servicios-fisicos .btn-outline-primary,
+#servicios-fisicos .btn-outline-secondary {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+}
+#servicios-fisicos .btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: white;
+}
+#servicios-fisicos .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Ajuste para móvil (2 columnas) */
+@media (max-width: 991.98px) {
+    #servicios-fisicos .card-img-top {
+        height: 150px;
+    }
+    #servicios-fisicos .card-title {
+        font-size: 1rem;
+    }
+    #servicios-fisicos .card-text {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Paquetes */
 #paquetes .card {

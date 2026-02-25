@@ -188,44 +188,175 @@
     </div>
 </section>
 
-    <!-- SERVICIOS FÍSICOS (IMPRESIÓN) -->
-    <!--<section id="servicios-fisicos" class="py-5">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5">Servicios de Impresión</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Tarjetas" class="card-img-top" alt="Tarjetas de presentación">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Tarjetas de presentación</h5>
-                            <p class="card-text text-muted">Diseño personalizado, papel premium, acabados mate o brillante.</p>
-                            <p class="fw-bold text-primary">Desde $350 MXN</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Papelería" class="card-img-top" alt="Papelería corporativa">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Papelería corporativa</h5>
-                            <p class="card-text text-muted">Hojas membretadas, sobres, carpetas y folders institucionales.</p>
-                            <p class="fw-bold text-primary">Desde $650 MXN</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Calendarios" class="card-img-top" alt="Calendarios">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Calendarios de pared / mesa</h5>
-                            <p class="card-text text-muted">Impresión full color, diseños personalizados con fechas clave.</p>
-                            <p class="fw-bold text-primary">Desde $420 MXN</p>
+<!-- SECCIÓN SERVICIOS FÍSICOS (IMPRESIÓN) - 10 SERVICIOS -->
+<section id="servicios-fisicos" class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Servicios de Impresión</h2>
+        <div class="row g-4 row-cols-2 row-cols-lg-5 justify-content-center">
+            
+            <!-- 1. Tarjetas de presentación -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1598791318878-10e76d178023?q=80&w=1974&auto=format&fit=crop" class="card-img-top rounded" alt="Tarjetas">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Tarjetas de presentación</h5>
+                        <p class="card-text small text-muted">Diseño personalizado, papel premium, acabados mate o brillante.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $350 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Tarjetas%20de%20presentaci%C3%B3n%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalTarjetas">Leer info</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>-->
+
+            <!-- 2. Papelería corporativa -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1974&auto=format&fit=crop" class="card-img-top rounded" alt="Papelería">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Papelería corporativa</h5>
+                        <p class="card-text small text-muted">Hojas membretadas, sobres, carpetas y folders.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $650 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Papeler%C3%ADa%20corporativa%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalPapeleria">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Calendarios -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=2070&auto=format&fit=crop" class="card-img-top rounded" alt="Calendarios">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Calendarios</h5>
+                        <p class="card-text small text-muted">De pared o mesa, personalizados con tus fechas.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $420 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Calendarios%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalCalendarios">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Folletos / Trípticos -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop" class="card-img-top rounded" alt="Folletos">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Folletos / Trípticos</h5>
+                        <p class="card-text small text-muted">Publicidad impresa en papel couché, diseño atractivo.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $550 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Folletos%20%2F%20Tr%C3%ADpticos%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalFolletos">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Flyers / Volantes -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2070&auto=format&fit=crop" class="card-img-top rounded" alt="Flyers">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Flyers / Volantes</h5>
+                        <p class="card-text small text-muted">Impresión rápida en gran formato, ideal para promociones.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $300 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Flyers%20%2F%20Volantes%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalFlyers">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Catálogos / Revistas -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1974&auto=format&fit=crop" class="card-img-top rounded" alt="Catálogos">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Catálogos / Revistas</h5>
+                        <p class="card-text small text-muted">Edición de lujo, papel de alta calidad.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $1,200 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Cat%C3%A1logos%20%2F%20Revistas%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalCatalogos">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Posters / Lonas -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1974&auto=format&fit=crop" class="card-img-top rounded" alt="Posters">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Pósters / Lonas</h5>
+                        <p class="card-text small text-muted">Impresión gran formato para eventos y publicidad exterior.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $800 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20P%C3%B3sters%20%2F%20Lonas%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalPosters">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Sellos de goma -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1598257006408-538c0057a65b?q=80&w=1974&auto=format&fit=crop" class="card-img-top rounded" alt="Sellos">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Sellos de goma</h5>
+                        <p class="card-text small text-muted">Sellos personalizados para oficina, fechadores, etc.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $150 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Sellos%20de%20goma%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalSellos">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Invitaciones impresas -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1613008357919-6cae7ca7d1cb?q=80&w=1974&auto=format&fit=crop" class="card-img-top rounded" alt="Invitaciones">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Invitaciones impresas</h5>
+                        <p class="card-text small text-muted">Para bodas, quince años, bautizos, con diseño exclusivo.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $600 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Invitaciones%20impresas%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalInvitaciones">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Cuadernos personalizados -->
+            <div class="col servicio-item">
+                <div class="card h-100 border-0 bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1544716278-ea9a3f1b6b5d?q=80&w=1974&auto=format&fit=crop" class="card-img-top rounded" alt="Cuadernos">
+                    <div class="card-body px-0">
+                        <h5 class="card-title fw-semibold">Cuadernos personalizados</h5>
+                        <p class="card-text small text-muted">Portada a medida, hojas rayadas o cuadriculadas.</p>
+                        <p class="fw-bold text-primary mb-2">Desde $250 MXN</p>
+                        <div class="d-flex gap-2">
+                            <a href="https://wa.me/5219901182550?text=Quiero%20cotizar%20este%20servicio%20de%20Cuadernos%20personalizados%20para%20impresi%C3%B3n" class="btn btn-sm btn-outline-primary flex-grow-1" target="_blank">Cotizar</a>
+                            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalCuadernos">Leer info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /row -->
+    </div> <!-- /container -->
+</section>
 
     <!-- SERVICIOS DIGITALES -->
     <!--<section id="servicios-digitales" class="py-5 bg-light">
@@ -484,6 +615,300 @@
             <p class="text-center small text-secondary mb-0">© 2025 Teen Informatics. Todos los derechos reservados.</p>
         </div>
     </footer>-->
+
+
+
+    <!-- MODALES INFORMATIVOS PARA CADA SERVICIO DE IMPRESIÓN -->
+
+<!-- Modal Tarjetas -->
+<div class="modal fade" id="modalTarjetas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tarjetas de presentación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselTarjetas" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1598791318878-10e76d178023?q=80&w=1974&auto=format&fit=crop" class="d-block w-100 rounded" alt="Tarjetas 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1598791318878-10e76d178023?q=80&w=1974&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Tarjetas 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Láser / Offset</p>
+                <p><strong>Papel:</strong> Couchet 300g, mate o brillante</p>
+                <p><strong>Medidas:</strong> 9x5 cm, 8.5x5.5 cm</p>
+                <p><strong>Archivos:</strong> PDF, AI, JPG (300dpi)</p>
+                <p><strong>Acabados:</strong> Plastificado, esquinas redondeadas</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Papelería -->
+<div class="modal fade" id="modalPapeleria" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Papelería corporativa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselPapeleria" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1974&auto=format&fit=crop" class="d-block w-100 rounded" alt="Papelería 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1974&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Papelería 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Offset / Digital</p>
+                <p><strong>Papel:</strong> Bond 90g, Couchet 250g</p>
+                <p><strong>Incluye:</strong> Hojas membretadas, sobres, carpetas</p>
+                <p><strong>Archivos:</strong> PDF, CDR, EPS</p>
+                <p><strong>Personalización:</strong> Logotipo, colores institucionales</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Calendarios -->
+<div class="modal fade" id="modalCalendarios" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Calendarios</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselCalendarios" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=2070&auto=format&fit=crop" class="d-block w-100 rounded" alt="Calendario 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=2070&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Calendario 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Láser color</p>
+                <p><strong>Papel:</strong> Couchet 250g, con barniz</p>
+                <p><strong>Medidas:</strong> 30x30 cm, 21x29.7 cm</p>
+                <p><strong>Tipos:</strong> Pared, escritorio, imantados</p>
+                <p><strong>Acabados:</strong> Espiral, anillado</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Folletos -->
+<div class="modal fade" id="modalFolletos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Folletos / Trípticos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselFolletos" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop" class="d-block w-100 rounded" alt="Folletos 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Folletos 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Digital / Offset</p>
+                <p><strong>Papel:</strong> Couchet 150g, 200g</p>
+                <p><strong>Doblado:</strong> Tríptico, díptico, desplegable</p>
+                <p><strong>Archivos:</strong> PDF, INDD, AI</p>
+                <p><strong>Acabados:</strong> Plastificado, troquelado</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Flyers -->
+<div class="modal fade" id="modalFlyers" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Flyers / Volantes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselFlyers" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2070&auto=format&fit=crop" class="d-block w-100 rounded" alt="Flyers 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2070&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Flyers 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Láser / Inyección</p>
+                <p><strong>Papel:</strong> Couchet 130g, 170g</p>
+                <p><strong>Medidas:</strong> A5, A6, 1/4 carta</p>
+                <p><strong>Archivos:</strong> PDF, JPG, PNG</p>
+                <p><strong>Tiradas:</strong> Mínimo 100 piezas</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Catálogos -->
+<div class="modal fade" id="modalCatalogos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Catálogos / Revistas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselCatalogos" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1974&auto=format&fit=crop" class="d-block w-100 rounded" alt="Catálogos 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1974&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Catálogos 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Offset 4/4</p>
+                <p><strong>Papel:</strong> Couchet 200g interiores, portada 300g</p>
+                <p><strong>Encuadernación:</strong> Grapado, hot melt, espiral</p>
+                <p><strong>Archivos:</strong> PDF listos para imprenta</p>
+                <p><strong>Acabados:</strong> Barniz UV, laminado</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Posters -->
+<div class="modal fade" id="modalPosters" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Pósters / Lonas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselPosters" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1974&auto=format&fit=crop" class="d-block w-100 rounded" alt="Posters 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1974&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Posters 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Gran formato, inyección</p>
+                <p><strong>Material:</strong> Lona, vinil, papel fotográfico</p>
+                <p><strong>Medidas:</strong> Hasta 1.50 m x 3 m</p>
+                <p><strong>Archivos:</strong> TIFF, PDF (alta resolución)</p>
+                <p><strong>Acabados:</strong> Ojillos, bastidor</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Sellos -->
+<div class="modal fade" id="modalSellos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sellos de goma</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselSellos" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1598257006408-538c0057a65b?q=80&w=1974&auto=format&fit=crop" class="d-block w-100 rounded" alt="Sellos 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1598257006408-538c0057a65b?q=80&w=1974&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Sellos 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Fabricación:</strong> Goma vulcanizada / fotopolímero</p>
+                <p><strong>Forma:</strong> Redondo, rectangular, personalizada</p>
+                <p><strong>Incluye:</strong> Estuche, tinta</p>
+                <p><strong>Archivos:</strong> Vector (AI, CDR, EPS)</p>
+                <p><strong>Usos:</strong> Firma, fechador, numerador</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Invitaciones -->
+<div class="modal fade" id="modalInvitaciones" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Invitaciones impresas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselInvitaciones" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1613008357919-6cae7ca7d1cb?q=80&w=1974&auto=format&fit=crop" class="d-block w-100 rounded" alt="Invitaciones 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1613008357919-6cae7ca7d1cb?q=80&w=1974&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Invitaciones 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Digital / Hot stamping</p>
+                <p><strong>Papel:</strong> Opalina 250g, reciclado, kraft</p>
+                <p><strong>Medidas:</strong> 14x14 cm, 10x20 cm</p>
+                <p><strong>Archivos:</strong> PDF, AI, PSD</p>
+                <p><strong>Acabados:</strong> Lazo, relieve, foil</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cuadernos -->
+<div class="modal fade" id="modalCuadernos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cuadernos personalizados</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselCuadernos" class="carousel slide carousel-fade mb-3" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1544716278-ea9a3f1b6b5d?q=80&w=1974&auto=format&fit=crop" class="d-block w-100 rounded" alt="Cuadernos 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1544716278-ea9a3f1b6b5d?q=80&w=1974&auto=format&fit=crop&crop=entropy" class="d-block w-100 rounded" alt="Cuadernos 2">
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Impresión:</strong> Serigrafía / Digital</p>
+                <p><strong>Interior:</strong> Papel bond 80g, rayado / cuadrícula</p>
+                <p><strong>Portada:</strong> Cartulina plastificada</p>
+                <p><strong>Encuadernación:</strong> Espiral, cosido</p>
+                <p><strong>Medidas:</strong> A5, carta, personalizado</p>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Bootstrap JS (Popper incluido) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

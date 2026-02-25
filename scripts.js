@@ -209,3 +209,28 @@ document.querySelector('.scroll-down-btn')?.addEventListener('click', function(e
         iniciarContadores();
     }
 })();
+
+// ===== OBSERVER PARA CREDIBILIDAD Y SERVICIOS =====
+(function() {
+    // Observar sección credibilidad (ya existente)
+    const seccionCredibilidad = document.getElementById('credibilidad');
+    if (seccionCredibilidad) {
+        // ... tu código actual para credibilidad ...
+    }
+
+    // Observar ítems de servicios de impresión
+    const serviciosItems = document.querySelectorAll('#servicios-fisicos .servicio-item');
+    if (serviciosItems.length) {
+        const observerServicios = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        serviciosItems.forEach(item => observerServicios.observe(item));
+    }
+})();
