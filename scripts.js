@@ -154,7 +154,7 @@ document.querySelector('.scroll-down-btn')?.addEventListener('click', function(e
         const objetivo = parseInt(elemento.getAttribute('data-target'), 10);
         let actual = 0;
         const incremento = Math.ceil(objetivo / 50); // 50 pasos
-        const duracion = 80; // ms
+        const duracion = 50; // ms
         const interval = setInterval(() => {
             actual += incremento;
             if (actual >= objetivo) {
