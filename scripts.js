@@ -124,3 +124,56 @@ document.querySelector('.scroll-down-btn')?.addEventListener('click', function(e
         });
     }
 });
+
+// ===== CREDIBILIDAD: ANIMACIÓN DE ENTRADA Y CONTADORES =====
+(function() {
+    const seccion = document.getElementById('credibilidad');
+    if (!seccion) return;
+
+    const items = seccion.querySelectorAll('.credibilidad-item');
+    const contadores = seccion.querySelectorAll('.contador');
+
+    // Función para animar un contador
+    function animarContador(elemento) {
+        const objetivo = parseInt(elemento.getAttribute('data-target'), 10);
+        let actual = 0;
+        const incremento = Math.ceil(objetivo / 50);
+        const timer = setInterval(() => {
+            actual += incremento;
+            if (actual >= objetivo) {
+                elemento.textContent = objetivo;
+                clearInterval(timer);
+            } else {
+                elemento.textContent = actual;
+            }
+        }, 30);
+    }
+
+    // Función para verificar si la sección está en el viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top <= window.innerHeight * 0.8 && rect.bottom >= 0;
+    }
+
+    // Función para actualizar la clase 'visible' en los items
+    function updateVisibility() {
+        if (isElementInViewport(seccion)) {
+            items.forEach(item => item.classList.add('visible'));
+            // Iniciar contadores si aún no tienen el valor final
+            contadores.forEach(cont => {
+                const actual = parseInt(cont.textContent);
+                const objetivo = parseInt(cont.getAttribute('data-target'));
+                if (actual < objetivo) {
+                    animarContador(cont);
+                }
+            });
+        } else {
+            items.forEach(item => item.classList.remove('visible'));
+        }
+    }
+
+    // Ejecutar al cargar y al hacer scroll
+    window.addEventListener('load', updateVisibility);
+    window.addEventListener('scroll', updateVisibility);
+    window.addEventListener('resize', updateVisibility);
+})();

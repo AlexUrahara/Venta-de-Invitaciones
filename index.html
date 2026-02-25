@@ -148,41 +148,45 @@
 </a>
     </section>
 
-    <!-- SECCIÓN CREDIBILIDAD / CONFIANZA (con fondo blanco semitransparente) -->
-    <section class="py-5" style="background-color: rgba(255, 255, 255, 0.5);">
-        <div class="container">
-            <div class="row text-center g-4">
-                <div class="col-md-3 col-6">
-                    <div class="p-3">
-                        <i class="fa-regular fa-clock fa-3x text-primary mb-3"></i>
-                        <h5 class="text-dark">+8 años de experiencia</h5>
-                        <p class="text-secondary">Garantía y profesionalismo</p>
-                    </div>
+   <!-- SECCIÓN CREDIBILIDAD / CONFIANZA -->
+<section class="py-5 credibilidad" id="credibilidad">
+    <div class="container">
+        <div class="row text-center g-4 align-items-center">
+            <!-- Item 1: años -->
+            <div class="col-md-3 col-4 credibilidad-item">
+                <div class="p-3">
+                    <i class="fa-regular fa-clock fa-3x text-primary mb-3"></i>
+                    <h5 class="text-dark"><span class="contador" data-target="8">0</span>+ años de experiencia</h5>
+                    <p class="text-secondary">Garantía y profesionalismo</p>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="p-3">
-                        <i class="fa-regular fa-face-smile fa-3x text-primary mb-3"></i>
-                        <h5 class="text-dark">+500 clientes felices</h5>
-                        <p class="text-secondary">Recomendaciones y fidelidad</p>
-                    </div>
+            </div>
+            <!-- Item 2: clientes -->
+            <div class="col-md-3 col-4 credibilidad-item">
+                <div class="p-3">
+                    <i class="fa-regular fa-face-smile fa-3x text-primary mb-3"></i>
+                    <h5 class="text-dark"><span class="contador" data-target="500">0</span>+ clientes felices</h5>
+                    <p class="text-secondary">Recomendaciones y fidelidad</p>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="p-3">
-                        <i class="fa-regular fa-newspaper fa-3x text-primary mb-3"></i>
-                        <h5 class="text-dark">+1000 proyectos</h5>
-                        <p class="text-secondary">Impresos y digitales</p>
-                    </div>
+            </div>
+            <!-- Item 3: proyectos -->
+            <div class="col-md-3 col-4 credibilidad-item">
+                <div class="p-3">
+                    <i class="fa-regular fa-newspaper fa-3x text-primary mb-3"></i>
+                    <h5 class="text-dark"><span class="contador" data-target="1000">0</span>+ proyectos</h5>
+                    <p class="text-secondary">Impresos y digitales</p>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="p-3">
-                        <i class="fa-regular fa-star fa-3x text-primary mb-3"></i>
-                        <h5 class="text-dark">Calidad garantizada</h5>
-                        <p class="text-secondary">Materiales y acabados</p>
-                    </div>
+            </div>
+            <!-- Item 4: calidad (solo visible en escritorio, oculto en móvil) -->
+            <div class="col-md-3 d-none d-md-block credibilidad-item calidad-item">
+                <div class="p-3">
+                    <i class="fa-regular fa-star fa-3x text-primary mb-3"></i>
+                    <h5 class="text-dark">Calidad garantizada</h5>
+                    <p class="text-secondary">Materiales y acabados</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- SERVICIOS FÍSICOS (IMPRESIÓN) -->
     <!--<section id="servicios-fisicos" class="py-5">

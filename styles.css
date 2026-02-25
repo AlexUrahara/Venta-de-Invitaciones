@@ -285,6 +285,98 @@ section {
     color: #fff;
 }
 
+
+/* ===== SECCIÓN CREDIBILIDAD ===== */
+.credibilidad {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Líneas divisorias verticales en escritorio */
+@media (min-width: 768px) {
+    .credibilidad .credibilidad-item:not(:last-child) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .credibilidad .credibilidad-item {
+        position: relative;
+    }
+}
+
+/* Estilo para los números */
+.credibilidad .contador {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--bs-primary);
+    display: inline-block;
+    min-width: 2.5rem;
+    text-align: right;
+}
+@media (max-width: 768px) {
+    .credibilidad .contador {
+        font-size: 1.4rem;
+        min-width: 2rem;
+    }
+}
+
+/* ===== ANIMACIÓN DE APARICIÓN DESDE ABAJO ===== */
+.credibilidad .credibilidad-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.credibilidad .credibilidad-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pequeño retardo para cada item (opcional) */
+.credibilidad .credibilidad-item:nth-child(1).visible { transition-delay: 0.1s; }
+.credibilidad .credibilidad-item:nth-child(2).visible { transition-delay: 0.2s; }
+.credibilidad .credibilidad-item:nth-child(3).visible { transition-delay: 0.3s; }
+.credibilidad .credibilidad-item:nth-child(4).visible { transition-delay: 0.4s; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Tarjetas de servicio */
 .card {
     transition: transform 0.2s, box-shadow 0.2s;
