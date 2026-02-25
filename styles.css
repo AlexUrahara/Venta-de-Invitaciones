@@ -385,98 +385,82 @@ section {
         font-size: 0.8rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Paquetes */
-#paquetes .card {
-    transition: 0.2s;
-}
-#paquetes .card.border-primary {
-    border-width: 2px;
+/* ===== IGUALAR ALTURA DE CARDS DE SERVICIOS DE IMPRESIÓN ===== */
+#servicios-fisicos .card {
+    height: 100%; /* Hace que todas las cards ocupen el alto completo de la columna */
 }
 
-/* Proceso */
-.process-step .badge {
-    width: 60px;
-    height: 60px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    background-color: var(--bs-primary);
+#servicios-fisicos .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la card */
 }
 
-/* Testimonios */
-#testimonios .card {
-    background-color: white;
+#servicios-fisicos .card-text {
+    flex-grow: 1; /* El texto ocupa el espacio disponible, empujando los botones hacia abajo */
+    margin-bottom: 1rem;
+    /* Opcional: limitar altura y mostrar scroll si el texto es muy largo */
+    max-height: 4.5rem; /* Aproximadamente 3 líneas de texto */
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
-/* Footer */
-footer a:hover {
-    color: white !important;
-    text-decoration: underline !important;
+/* Scroll personalizado (opcional, para que se vea más limpio) */
+#servicios-fisicos .card-text::-webkit-scrollbar {
+    width: 4px;
+}
+#servicios-fisicos .card-text::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+/* ===== EFECTO ZOOM EN CARDS DE SERVICIOS ===== */
+#servicios-fisicos .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 991.98px) {
-    .hero-content .display-1 {
-        font-size: clamp(2rem, 10vw, 4rem);
-    }
-    .hero-content .lead {
-        font-size: 1.25rem;
-    }
+#servicios-fisicos .card:hover {
+    transform: scale(1.08); /* Aumenta ligeramente el tamaño */
 }
+
+/* En móviles, quizás quieras desactivar el zoom o hacerlo más suave */
 @media (max-width: 768px) {
-    body {
-        padding-top: 70px;
-    }
-    section {
-        scroll-margin-top: 70px;
-    }
-    #hero {
-        margin-top: -70px;
-    }
-    .hero-content {
-        padding-left: 20px;
-        padding-right: 20px;
+    #servicios-fisicos .card:hover {
+        transform: scale(1.01); /* zoom más sutil en pantallas táctiles */
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
