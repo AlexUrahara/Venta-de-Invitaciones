@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teen Informatics · Diseño, Marketing e Impresión</title>
+    <!-- Favicon (personalizado) -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23007bff'/%3E%3Ctext x='4' y='12' fill='white' font-size='10' font-family='Arial'%3ETI%3C/text%3E%3C/svg%3E">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts: Inter moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR FIJO BLANCO CON OFF CANVAS (DERECHA 80%) -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">Teen Informatics</a>
+            <!-- Botón para offcanvas (solo móvil) -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menú escritorio (visible en lg) -->
+            <div class="collapse navbar-collapse" id="navbarDesktop">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios-fisicos">Impresión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios-digitales">Digital</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#paquetes">Paquetes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- OFF CANVAS MENÚ MÓVIL (desliza desde derecha, 80% ancho) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width: 80%;">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Teen Informatics</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="navbar-nav flex-column mt-4 p-3">
+                <li class="nav-item"><a class="nav-link py-2" href="#hero" data-bs-dismiss="offcanvas">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link py-2" href="#servicios-fisicos" data-bs-dismiss="offcanvas">Impresión</a></li>
+                <li class="nav-item"><a class="nav-link py-2" href="#servicios-digitales" data-bs-dismiss="offcanvas">Digital</a></li>
+                <li class="nav-item"><a class="nav-link py-2" href="#paquetes" data-bs-dismiss="offcanvas">Paquetes</a></li>
+                <li class="nav-item"><a class="nav-link py-2" href="#proceso" data-bs-dismiss="offcanvas">Proceso</a></li>
+                <li class="nav-item"><a class="nav-link py-2" href="#portafolio" data-bs-dismiss="offcanvas">Portafolio</a></li>
+                <li class="nav-item"><a class="nav-link py-2" href="#testimonios" data-bs-dismiss="offcanvas">Testimonios</a></li>
+                <li class="nav-item"><a class="nav-link py-2" href="#contacto" data-bs-dismiss="offcanvas">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- HERO CARRUSEL FULL SCREEN (100vh / 100dvh) CON ANIMACIÓN SECUENCIAL -->
+    <section id="hero" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="overlay"></div>
+                    <div class="container h-100 d-flex align-items-center">
+                        <div class="hero-content text-start text-white">
+                            <div class="hero-line line-1 display-1 fw-bold">Diseño que</div>
+                            <div class="hero-line line-2 display-1 fw-bold">comunica</div>
+                            <p class="hero-line line-3 lead fs-3">Identidad visual · Branding · Marketing</p>
+                            <a href="#contacto" class="hero-line line-4 btn btn-primary btn-lg mt-3">Cotizar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop');">
+                    <div class="overlay"></div>
+                    <div class="container h-100 d-flex align-items-center">
+                        <div class="hero-content text-start text-white">
+                            <div class="hero-line line-1 display-1 fw-bold">Impresión</div>
+                            <div class="hero-line line-2 display-1 fw-bold">de calidad</div>
+                            <p class="hero-line line-3 lead fs-3">Tarjetas, papelería, calendarios</p>
+                            <a href="#servicios-fisicos" class="hero-line line-4 btn btn-primary btn-lg mt-3">Ver servicios</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop');">
+                    <div class="overlay"></div>
+                    <div class="container h-100 d-flex align-items-center">
+                        <div class="hero-content text-start text-white">
+                            <div class="hero-line line-1 display-1 fw-bold">Soluciones</div>
+                            <div class="hero-line line-2 display-1 fw-bold">digitales</div>
+                            <p class="hero-line line-3 lead fs-3">Invitaciones web, archivos, sitios</p>
+                            <a href="#servicios-digitales" class="hero-line line-4 btn btn-primary btn-lg mt-3">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CREDIBILIDAD / CONFIANZA (con fondo blanco semitransparente) -->
+    <section class="py-5" style="background-color: rgba(255, 255, 255, 0.5);">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6">
+                    <div class="p-3">
+                        <i class="fa-regular fa-clock fa-3x text-primary mb-3"></i>
+                        <h5 class="text-dark">+8 años de experiencia</h5>
+                        <p class="text-secondary">Garantía y profesionalismo</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3">
+                        <i class="fa-regular fa-face-smile fa-3x text-primary mb-3"></i>
+                        <h5 class="text-dark">+500 clientes felices</h5>
+                        <p class="text-secondary">Recomendaciones y fidelidad</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3">
+                        <i class="fa-regular fa-newspaper fa-3x text-primary mb-3"></i>
+                        <h5 class="text-dark">+1000 proyectos</h5>
+                        <p class="text-secondary">Impresos y digitales</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3">
+                        <i class="fa-regular fa-star fa-3x text-primary mb-3"></i>
+                        <h5 class="text-dark">Calidad garantizada</h5>
+                        <p class="text-secondary">Materiales y acabados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS FÍSICOS (IMPRESIÓN) -->
+    <section id="servicios-fisicos" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Servicios de Impresión</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Tarjetas" class="card-img-top" alt="Tarjetas de presentación">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Tarjetas de presentación</h5>
+                            <p class="card-text text-muted">Diseño personalizado, papel premium, acabados mate o brillante.</p>
+                            <p class="fw-bold text-primary">Desde $350 MXN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Papelería" class="card-img-top" alt="Papelería corporativa">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Papelería corporativa</h5>
+                            <p class="card-text text-muted">Hojas membretadas, sobres, carpetas y folders institucionales.</p>
+                            <p class="fw-bold text-primary">Desde $650 MXN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Calendarios" class="card-img-top" alt="Calendarios">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Calendarios de pared / mesa</h5>
+                            <p class="card-text text-muted">Impresión full color, diseños personalizados con fechas clave.</p>
+                            <p class="fw-bold text-primary">Desde $420 MXN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS DIGITALES -->
+    <section id="servicios-digitales" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Servicios Digitales</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Invitaciones+Web" class="card-img-top" alt="Invitaciones web">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Invitaciones web</h5>
+                            <p class="card-text text-muted">Bodas, quince años, bautizos, eventos. Diseño interactivo y RSVP.</p>
+                            <p class="fw-bold text-primary">Desde $1,200 MXN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Archivos+Digitales" class="card-img-top" alt="Archivos digitales">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Archivos digitales</h5>
+                            <p class="card-text text-muted">Edición de imágenes, PDF, videos corporativos y contenido multimedia.</p>
+                            <p class="fw-bold text-primary">Desde $500 MXN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="https://placehold.co/600x400/cccccc/ffffff?text=Servicios+Web" class="card-img-top" alt="Servicios web">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Servicios web</h5>
+                            <p class="card-text text-muted">Landing pages, sitios corporativos, tiendas online básicas.</p>
+                            <p class="fw-bold text-primary">Desde $2,500 MXN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAQUETES / PLANES -->
+    <section id="paquetes" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Paquetes todo en uno</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow text-center p-4">
+                        <h3 class="fw-bold">Básico</h3>
+                        <p class="text-muted">Ideal para emprendedores</p>
+                        <p class="display-6 fw-bold text-primary">$1,999</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>50 tarjetas</li>
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>Diseño de logo</li>
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>Invitación digital</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline-primary mt-3">Lo quiero</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow text-center p-4 border-primary border-2">
+                        <div class="badge bg-primary text-white w-25 mx-auto">Recomendado</div>
+                        <h3 class="fw-bold mt-2">Profesional</h3>
+                        <p class="text-muted">Para negocios establecidos</p>
+                        <p class="display-6 fw-bold text-primary">$3,499</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>200 tarjetas</li>
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>Papelería completa</li>
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>Sitio web básico</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-primary mt-3">Lo quiero</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow text-center p-4">
+                        <h3 class="fw-bold">Empresarial</h3>
+                        <p class="text-muted">Todo incluido</p>
+                        <p class="display-6 fw-bold text-primary">$5,999</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>500 tarjetas</li>
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>Campaña digital</li>
+                            <li><i class="fa-regular fa-circle-check text-primary me-2"></i>Video corporativo</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline-primary mt-3">Lo quiero</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO PASO A PASO -->
+    <section id="proceso" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Cómo trabajamos</h2>
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <div class="process-step">
+                        <span class="badge bg-primary rounded-circle p-3 fs-4">1</span>
+                        <h5 class="mt-3">Reunión</h5>
+                        <p class="text-muted">Conocemos tu idea y necesidades</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="process-step">
+                        <span class="badge bg-primary rounded-circle p-3 fs-4">2</span>
+                        <h5 class="mt-3">Propuesta</h5>
+                        <p class="text-muted">Te presentamos diseño y presupuesto</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="process-step">
+                        <span class="badge bg-primary rounded-circle p-3 fs-4">3</span>
+                        <h5 class="mt-3">Aprobación</h5>
+                        <p class="text-muted">Realizamos ajustes hasta tu conformidad</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="process-step">
+                        <span class="badge bg-primary rounded-circle p-3 fs-4">4</span>
+                        <h5 class="mt-3">Entrega</h5>
+                        <p class="text-muted">Recibes tu producto final</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO VISUAL -->
+    <section id="portafolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Proyectos recientes</h2>
+            <div class="row g-3">
+                <div class="col-md-4"><img src="https://placehold.co/600x400/2c3e50/ffffff?text=Branding" class="img-fluid rounded shadow" alt="Proyecto 1"></div>
+                <div class="col-md-4"><img src="https://placehold.co/600x400/34495e/ffffff?text=Empaque" class="img-fluid rounded shadow" alt="Proyecto 2"></div>
+                <div class="col-md-4"><img src="https://placehold.co/600x400/2c3e50/ffffff?text=Web" class="img-fluid rounded shadow" alt="Proyecto 3"></div>
+                <div class="col-md-4"><img src="https://placehold.co/600x400/34495e/ffffff?text=Invitación" class="img-fluid rounded shadow" alt="Proyecto 4"></div>
+                <div class="col-md-4"><img src="https://placehold.co/600x400/2c3e50/ffffff?text=Revista" class="img-fluid rounded shadow" alt="Proyecto 5"></div>
+                <div class="col-md-4"><img src="https://placehold.co/600x400/34495e/ffffff?text=Calendario" class="img-fluid rounded shadow" alt="Proyecto 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Lo que dicen nuestros clientes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm p-4 h-100">
+                        <i class="fa-solid fa-quote-left fa-2x text-primary opacity-50 mb-3"></i>
+                        <p class="fst-italic">"Excelente atención y calidad en las tarjetas. Superaron mis expectativas."</p>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-circle-user fa-2x text-secondary me-3"></i>
+                            <div><strong>María G.</strong> <br> <span class="text-muted">Emprendedora</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm p-4 h-100">
+                        <i class="fa-solid fa-quote-left fa-2x text-primary opacity-50 mb-3"></i>
+                        <p class="fst-italic">"El sitio web que me diseñaron es moderno y rápido. Muy profesionales."</p>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-circle-user fa-2x text-secondary me-3"></i>
+                            <div><strong>Carlos R.</strong> <br> <span class="text-muted">Director creativo</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm p-4 h-100">
+                        <i class="fa-solid fa-quote-left fa-2x text-primary opacity-50 mb-3"></i>
+                        <p class="fst-italic">"Las invitaciones para mi boda fueron hermosas, todos preguntaron quién las hizo."</p>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-circle-user fa-2x text-secondary me-3"></i>
+                            <div><strong>Ana L.</strong> <br> <span class="text-muted">Cliente particular</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION FINAL -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="fw-bold">¿Listo para impulsar tu marca?</h2>
+            <p class="lead">Contáctanos hoy mismo y recibe una asesoría sin costo.</p>
+            <a href="#contacto" class="btn btn-lg btn-light text-primary mt-3">Quiero más información</a>
+        </div>
+    </section>
+
+    <!-- CONTACTO (formulario, enlaces, redes) -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Hablemos</h2>
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="fw-semibold">Comunicación directa</h5>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3"><i class="fa-regular fa-envelope text-primary me-2"></i> hola@teeninformatics.mx</li>
+                        <li class="mb-3"><i class="fa-regular fa-phone text-primary me-2"></i> +52 55 1234 5678</li>
+                        <li class="mb-3"><i class="fa-regular fa-clock text-primary me-2"></i> Lun-Vie 9am a 6pm</li>
+                    </ul>
+                    <div class="social-links mt-4">
+                        <a href="#" class="text-dark me-3 fs-4"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-dark me-3 fs-4"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-dark me-3 fs-4"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="text-dark fs-4"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Teen Informatics</h6>
+                    <p class="small text-secondary">Diseño, marketing e impresión con calidad profesional.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Enlaces rápidos</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#hero" class="text-secondary text-decoration-none">Inicio</a></li>
+                        <li><a href="#servicios-fisicos" class="text-secondary text-decoration-none">Impresión</a></li>
+                        <li><a href="#servicios-digitales" class="text-secondary text-decoration-none">Digital</a></li>
+                        <li><a href="#contacto" class="text-secondary text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Legal</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-secondary text-decoration-none">Aviso de privacidad</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Términos del servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <p class="text-center small text-secondary mb-0">© 2025 Teen Informatics. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Popper incluido) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="scripts.js"></script>
+</body>
+</html>

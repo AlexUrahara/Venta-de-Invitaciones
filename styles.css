@@ -1,0 +1,218 @@
+/* ===== VARIABLES Y RESET ===== */
+:root {
+    --bs-primary: #007bff;        /* Azul de acento */
+    --bs-primary-rgb: 0, 123, 255;
+    --bs-dark: #212529;
+    --bs-light: #f8f9fa;
+    --font-family-base: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family-base);
+    padding-top: 76px; /* altura del navbar fijo */
+    color: #212529;
+}
+
+/* ===== NAVBAR ===== */
+#mainNav {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.navbar-brand {
+    letter-spacing: -0.02em;
+    font-size: 1.5rem;
+}
+.nav-link {
+    font-weight: 500;
+    color: #212529;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+}
+.nav-link:hover {
+    color: var(--bs-primary);
+}
+
+/* Offcanvas personalizado */
+.offcanvas-end {
+    width: 80% !important;
+    border-left: none;
+}
+.offcanvas-body .nav-link {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+.offcanvas-body .nav-link:hover {
+    background-color: #f1f1f1;
+}
+
+/* ===== HERO MEJORADO ===== */
+#hero {
+    margin-top: -76px; /* compensa el padding-top del body para que el hero comience en el borde superior */
+}
+#hero,
+#hero .carousel-inner,
+#hero .carousel-item,
+.hero-slide {
+    height: 100vh;        /* fallback */
+    height: 100dvh;       /* dinámico en móviles */
+    min-height: 600px;
+}
+
+.hero-slide {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 70% opacidad */
+    z-index: 1;
+}
+
+.hero-slide .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+/* Cada línea empieza oculta y se desliza */
+.hero-line {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.6s ease forwards;
+}
+
+/* Retrasos secuenciales (0.5s entre cada línea) */
+.carousel-item.active .hero-line.line-1 { animation-delay: 0s; }
+.carousel-item.active .hero-line.line-2 { animation-delay: 0.5s; }
+.carousel-item.active .hero-line.line-3 { animation-delay: 1s; }
+.carousel-item.active .hero-line.line-4 { animation-delay: 1.5s; }
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tipografía del hero */
+.hero-content .display-1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.hero-content .lead {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+}
+.carousel-indicators .active {
+    background-color: white;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+    scroll-margin-top: 76px;
+}
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-outline-primary {
+    border-color: var(--bs-primary);
+    color: var(--bs-primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+/* Tarjetas de servicio */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1) !important;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Paquetes */
+#paquetes .card {
+    transition: 0.2s;
+}
+#paquetes .card.border-primary {
+    border-width: 2px;
+}
+
+/* Proceso */
+.process-step .badge {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: var(--bs-primary);
+}
+
+/* Testimonios */
+#testimonios .card {
+    background-color: white;
+}
+
+/* Footer */
+footer a:hover {
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+    .hero-content .display-1 {
+        font-size: clamp(2rem, 10vw, 4rem);
+    }
+    .hero-content .lead {
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    section {
+        scroll-margin-top: 70px;
+    }
+    #hero {
+        margin-top: -70px; /* ajuste para móviles si el navbar es más pequeño */
+    }
+}
