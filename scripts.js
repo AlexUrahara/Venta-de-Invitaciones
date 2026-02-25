@@ -47,7 +47,7 @@ function setHeroHeight() {
             item.style.height = window.innerHeight + 'px';
         });
     }
-}
+}  
 window.addEventListener('load', setHeroHeight);
 window.addEventListener('resize', setHeroHeight);
 
