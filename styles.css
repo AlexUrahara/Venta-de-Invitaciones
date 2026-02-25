@@ -1,6 +1,6 @@
 /* ===== VARIABLES Y RESET ===== */
 :root {
-    --bs-primary: #007bff;        /* Azul de acento */
+    --bs-primary: #007bff;
     --bs-primary-rgb: 0, 123, 255;
     --bs-dark: #212529;
     --bs-light: #f8f9fa;
@@ -9,7 +9,7 @@
 
 body {
     font-family: var(--font-family-base);
-    padding-top: 76px; /* altura del navbar fijo */
+    padding-top: 76px;
     color: #212529;
 }
 
@@ -18,18 +18,51 @@ body {
     background-color: #ffffff !important;
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
+
+/* Logo en azul y efecto shake */
 .navbar-brand {
+    color: var(--bs-primary) !important;
     letter-spacing: -0.02em;
     font-size: 1.5rem;
+    transition: transform 0.2s;
+    display: inline-block;
 }
-.nav-link {
-    font-weight: 500;
-    color: #212529;
-    margin: 0 0.5rem;
-    transition: color 0.2s;
+.navbar-brand:hover {
+    animation: shake 0.5s ease-in-out;
 }
-.nav-link:hover {
-    color: var(--bs-primary);
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+/* Estilos para enlaces en escritorio */
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        position: relative;
+        font-weight: 500;
+        color: #212529;
+        margin: 0 0.5rem;
+        padding-bottom: 0.25rem;
+        transition: color 0.2s;
+    }
+    .navbar-nav .nav-link:hover {
+        color: var(--bs-primary);
+    }
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--bs-primary);
+        transition: width 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover::after {
+        width: 80%;
+    }
 }
 
 /* Offcanvas personalizado */
@@ -41,21 +74,34 @@ body {
     font-size: 1.1rem;
     padding: 0.75rem 1rem;
     border-bottom: 1px solid #eee;
+    transition: transform 0.2s;
 }
 .offcanvas-body .nav-link:hover {
     background-color: #f1f1f1;
+    transform: scale(1.05); /* zoom en móvil */
+}
+
+/* Créditos móvil */
+.creditos-mobile {
+    border-top: 1px solid #dee2e6;
+}
+.creditos-mobile a {
+    transition: opacity 0.2s;
+}
+.creditos-mobile a:hover {
+    opacity: 0.7;
 }
 
 /* ===== HERO MEJORADO ===== */
 #hero {
-    margin-top: -76px; /* compensa el padding-top del body para que el hero comience en el borde superior */
+    margin-top: -76px;
 }
 #hero,
 #hero .carousel-inner,
 #hero .carousel-item,
 .hero-slide {
-    height: 100vh;        /* fallback */
-    height: 100dvh;       /* dinámico en móviles */
+    height: 100vh;
+    height: 100dvh;
     min-height: 600px;
 }
 
@@ -71,7 +117,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* 70% opacidad */
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -84,18 +130,18 @@ body {
     max-width: 800px;
 }
 
-/* Cada línea empieza oculta y se desliza */
+/* Animación más suave */
 .hero-line {
     opacity: 0;
     transform: translateY(30px);
-    animation: slideIn 0.6s ease forwards;
+    animation: slideIn 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
-/* Retrasos secuenciales (0.5s entre cada línea) */
-.carousel-item.active .hero-line.line-1 { animation-delay: 0s; }
-.carousel-item.active .hero-line.line-2 { animation-delay: 0.5s; }
-.carousel-item.active .hero-line.line-3 { animation-delay: 1s; }
-.carousel-item.active .hero-line.line-4 { animation-delay: 1.5s; }
+/* Nuevos retrasos: primera línea 1s, luego 0.5s entre cada una */
+.carousel-item.active .hero-line.line-1 { animation-delay: 1s; }
+.carousel-item.active .hero-line.line-2 { animation-delay: 1.5s; }
+.carousel-item.active .hero-line.line-3 { animation-delay: 2s; }
+.carousel-item.active .hero-line.line-4 { animation-delay: 2.5s; }
 
 @keyframes slideIn {
     to {
@@ -110,20 +156,51 @@ body {
     line-height: 1.1;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
-
 .hero-content .lead {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-/* Indicadores del carrusel */
-.carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0.5);
+/* ===== INDICADORES DEL HERO CON TRANSICIÓN ULTRA SUAVE Y PUNTAS REDONDAS ===== */
+.custom-indicators {
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
 }
-.carousel-indicators .active {
-    background-color: white;
+
+.custom-indicators button {
+    width: 45px;
+    height: 6px;                /* un poco más alto para mejor visibilidad */
+    border: none;
+    border-radius: 20px;         /* puntas completamente redondas */
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: width 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),  /* curva elástica suave */
+                background-color 0.4s ease,
+                transform 0.4s ease;
+    opacity: 0.8;
+}
+
+.custom-indicators button.active {
+    width: 90px;                 /* más ancho para destacar */
+    background-color: #ffffff;
+    opacity: 1;
+    transform: scaleY(1.2);      /* pequeño estiramiento vertical al activarse */
+}
+
+.custom-indicators button:not(.active) {
+    opacity: 0.5;
+    transform: scaleY(1);
+}
+
+/* Efecto hover para dar feedback */
+.custom-indicators button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+    transform: scaleY(1.1);
 }
 
 /* ===== SECCIONES GENERALES ===== */
@@ -213,6 +290,10 @@ footer a:hover {
         scroll-margin-top: 70px;
     }
     #hero {
-        margin-top: -70px; /* ajuste para móviles si el navbar es más pequeño */
+        margin-top: -70px;
+    }
+    .hero-content {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

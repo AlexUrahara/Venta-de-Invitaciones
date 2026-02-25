@@ -22,32 +22,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const heroCarousel = document.getElementById('hero');
 if (heroCarousel) {
     heroCarousel.addEventListener('slide.bs.carousel', function (event) {
-        // La siguiente slide (la que se va a mostrar)
         const nextSlide = event.relatedTarget;
-        // Selecciona todas las líneas de texto dentro de la próxima slide
         const lines = nextSlide.querySelectorAll('.hero-line');
-        // Forzamos el reinicio de la animación
         lines.forEach(line => {
             line.style.animation = 'none';
-            // Pequeño truco para forzar reflow
             void line.offsetHeight;
             line.style.animation = '';
         });
     });
 }
 
-// ===== AJUSTE DE ALTURA PARA MÓVILES (respaldo) =====
+// ===== AJUSTE DE ALTURA PARA MÓVILES =====
 function setHeroHeight() {
     const hero = document.getElementById('hero');
     if (hero) {
-        // Aseguramos altura completa (por si acaso)
         hero.style.height = window.innerHeight + 'px';
         const items = hero.querySelectorAll('.carousel-item');
         items.forEach(item => {
             item.style.height = window.innerHeight + 'px';
         });
     }
-}  
+}
 window.addEventListener('load', setHeroHeight);
 window.addEventListener('resize', setHeroHeight);
 

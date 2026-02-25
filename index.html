@@ -8,7 +8,9 @@
     <link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23007bff'/%3E%3Ctext x='4' y='12' fill='white' font-size='10' font-family='Arial'%3ETI%3C/text%3E%3C/svg%3E">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome 6 (iconos) -->
+    <!-- Bootstrap Icons (para redes sociales) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome 6 (iconos adicionales) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Google Fonts: Inter moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -20,7 +22,7 @@
     <!-- NAVBAR FIJO BLANCO CON OFF CANVAS (DERECHA 80%) -->
     <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold text-dark" href="#">Teen Informatics</a>
+            <a class="navbar-brand fw-bold" href="#">Teen Informatics</a>
             <!-- Botón para offcanvas (solo móvil) -->
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,7 +49,7 @@
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Teen Informatics</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body p-0">
+        <div class="offcanvas-body p-0 d-flex flex-column">
             <ul class="navbar-nav flex-column mt-4 p-3">
                 <li class="nav-item"><a class="nav-link py-2" href="#hero" data-bs-dismiss="offcanvas">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link py-2" href="#servicios-fisicos" data-bs-dismiss="offcanvas">Impresión</a></li>
@@ -58,10 +60,22 @@
                 <li class="nav-item"><a class="nav-link py-2" href="#testimonios" data-bs-dismiss="offcanvas">Testimonios</a></li>
                 <li class="nav-item"><a class="nav-link py-2" href="#contacto" data-bs-dismiss="offcanvas">Contacto</a></li>
             </ul>
+            <!-- CRÉDITOS MÓVIL (solo visible en offcanvas) -->
+            <div class="creditos-mobile text-center mt-auto p-3 bg-light">
+                <!--<p class="small mb-2">Diseño web con ❤️ por <strong>Alex</strong></p>-->
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://www.facebook.com/TeenInformaticsCode/?locale=es_LA" target="_blank" class="text-primary"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="https://www.instagram.com/teen_informatics/" target="_blank" class="text-primary"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="https://www.tiktok.com/@teen.informatics" target="_blank" class="text-primary"><i class="bi bi-tiktok fs-5"></i></a>
+                    <a href="https://wa.me/5219901182550?text=Hola%2C%20me%20comunico%20por%20la%20invitaci%C3%B3n%20de%20boda" target="_blank" class="text-primary"><i class="bi bi-whatsapp fs-5"></i></a>
+                    <a href="#" target="_blank" class="text-primary"><i class="bi bi-globe2 fs-5"></i></a>
+                </div>
+                <p class="small mt-2 opacity-75">¿Quieres una invitación así? <br><a href="tel:+5219901182550" class="text-primary text-decoration-underline">Contáctame</a></p>
+            </div>
         </div>
     </div>
 
-    <!-- HERO CARRUSEL FULL SCREEN (100vh / 100dvh) CON ANIMACIÓN SECUENCIAL -->
+    <!-- HERO CARRUSEL FULL SCREEN (SIN FLECHAS, CON 4 SLIDES) -->
     <section id="hero" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
         <div class="carousel-inner">
             <!-- Slide 1 -->
@@ -106,20 +120,27 @@
                     </div>
                 </div>
             </div>
+            <!-- Slide 4 (nuevo) -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="overlay"></div>
+                    <div class="container h-100 d-flex align-items-center">
+                        <div class="hero-content text-start text-white">
+                            <div class="hero-line line-1 display-1 fw-bold">Marketing</div>
+                            <div class="hero-line line-2 display-1 fw-bold">digital</div>
+                            <p class="hero-line line-3 lead fs-3">Redes sociales, campañas, contenido</p>
+                            <a href="#contacto" class="hero-line line-4 btn btn-primary btn-lg mt-3">Descubrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Controles del carrusel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
-        <div class="carousel-indicators">
+        <!-- Indicadores personalizados (sin flechas) -->
+        <div class="carousel-indicators custom-indicators">
             <button type="button" data-bs-target="#hero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#hero" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#hero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#hero" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
     </section>
 
